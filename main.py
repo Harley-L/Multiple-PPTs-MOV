@@ -100,6 +100,7 @@ def convert_one(name):
 def main():
     mypath = os.path.dirname(os.path.realpath(__file__)) + '\\ppts'
     ppts = [mypath + '\\' + f for f in listdir(mypath) if isfile(join(mypath, f))]
+    ppts.remove(mypath + '\\ppts.txt')
     for ppt in ppts:
         convert_one(ppt)
         print(ppt)
